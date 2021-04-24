@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableHighlight, SafeAreaView } from 'react-native';
 
-import { LinearGradient } from 'expo-linear-gradient';
+import { ScaledSheet } from 'react-native-size-matters';
 
 export default function Green() {
 return (
@@ -134,12 +134,16 @@ style={styles.navButtonBkg}
 
   );
 }
-const styles = StyleSheet.create({
+const styles = ScaledSheet.create({
   container : {
     flex:1,
     flexDirection : "column",
     height:100,
-  },
+     width: '100@s', // = scale(100)
+     height: '200@vs', // = verticalScale(200)
+     padding: '2@msr', // = Math.round(moderateScale(2))
+     margin: 5
+    },
   text : {
     padding: 20,
     fontFamily: 'helvetica'

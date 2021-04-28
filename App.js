@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableHighlight, SafeAreaView } from 'react-native';
 
-import { ScaledSheet } from 'react-native-size-matters';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Green() {
 return (
@@ -17,11 +17,7 @@ return (
         <View>
         <ScrollView style={styles.navContainer} horizontal={true} >
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
@@ -29,66 +25,42 @@ style={styles.navButtonBkg}
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
  <Text style={styles.navBtnTxt}>About</Text>
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
 <Text style={styles.navBtnTxt}>Portfolio</Text>
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
 <Text style={styles.navBtnTxt}>Prices</Text>
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
 <Text style={styles.navBtnTxt}>Products</Text>
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
 <Text style={styles.navBtnTxt}>FAQ</Text>
 </TouchableHighlight>
 </View>
 <View style={styles.navButton}>
-<LinearGradient
-// Background Linear Gradient
-colors={['#806817', '#d9b436']}
-style={styles.navButtonBkg}
-/>
+
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
 <Text style={styles.navBtnTxt}>Contact</Text>
@@ -134,16 +106,12 @@ style={styles.navButtonBkg}
 
   );
 }
-const styles = ScaledSheet.create({
+const styles = StyleSheet.create({
   container : {
     flex:1,
     flexDirection : "column",
     height:100,
-     width: '100@s', // = scale(100)
-     height: '200@vs', // = verticalScale(200)
-     padding: '2@msr', // = Math.round(moderateScale(2))
-     margin: 5
-    },
+  },
   text : {
     padding: 20,
     fontFamily: 'helvetica'
@@ -151,7 +119,6 @@ const styles = ScaledSheet.create({
   contentBorder : {
     backgroundColor: "#679159",
     height : "100",
-    padding:50,
     flex: 1,
     flexDirection:"column",
     height:100
@@ -189,12 +156,12 @@ const styles = ScaledSheet.create({
    },
    navBtnTxt : {
      color: "white",
-     fontWeight : 600,
+     fontWeight : "600",
      fontSize : 14
    },
    header2: {
      fontSize:20,
-     fontWeight: 600,
+     fontWeight: "600",
     color: "#679159",
     paddingBottom: 20
    },
@@ -213,12 +180,11 @@ const styles = ScaledSheet.create({
       paddingLeft: 10,
       paddingRight: 10,
       paddingTop: 10,
-      width:100
+      width:100,
+      color: "#fff",
       },
       
-      test :{
-        paddingTop:5
-      },
+    
       sec1 :{
         backgroundColor: "#ebebec",
         borderRadius : 30,
@@ -228,7 +194,7 @@ const styles = ScaledSheet.create({
       sec2 :{
         backgroundColor: "#ebebec",
         borderRadius : 30,
-        height:50,
+    
         paddingTop: 20,
         paddingBottom: 100
       },
@@ -243,7 +209,7 @@ const styles = ScaledSheet.create({
       },
       heading : {
         fontSize : 20,
-        fontWeight : 600,
+        fontWeight :"600",
         paddingTop:2
       },
       button : {

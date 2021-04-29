@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableHighlight, SafeAreaView } from 'react-native';
 
-import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Green() {
 return (
@@ -15,9 +14,8 @@ return (
         <Text style = {styles.header2}>Inspired by Creative Commons, licensed under Creative Commons.</Text>
         </View>
         <View>
-        <ScrollView style={styles.navContainer} horizontal={true} >
+        <View style={styles.navContainer} >
 <View style={styles.navButton}>
-
 
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
@@ -49,25 +47,11 @@ return (
 
 <TouchableHighlight activeOpacity={0.6}
   underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
-<Text style={styles.navBtnTxt}>Products</Text>
+<Text style={styles.navBtnTxt}>About</Text>
 </TouchableHighlight>
 </View>
-<View style={styles.navButton}>
-
-<TouchableHighlight activeOpacity={0.6}
-  underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
-<Text style={styles.navBtnTxt}>FAQ</Text>
-</TouchableHighlight>
 </View>
-<View style={styles.navButton}>
-
-<TouchableHighlight activeOpacity={0.6}
-  underlayColor="#45ba7b" onPress={() => Linking.openURL('http://google.com')}>
-<Text style={styles.navBtnTxt}>Contact</Text>
-</TouchableHighlight>
-</View>
-</ScrollView>
-<ScrollView style={styles.test}>
+<ScrollView >
 <View style= {styles.text}>
   <View  style= {styles.sec1}>
 <Text style= {styles.heading}>Template Usage</Text>
@@ -165,25 +149,26 @@ const styles = StyleSheet.create({
     color: "#679159",
     paddingBottom: 20
    },
-   navContainer: {
-    flexDirection: "row",
-    flex: 1,
-    backgroundColor:"#8c721b",
-    paddingBottom: 10,
-    padding: 20,
-  
-    },
-    navButton: {
-      flex: 1,      
-      alignItems: "center",
-      height: 40,
-      paddingLeft: 10,
-      paddingRight: 10,
-      paddingTop: 10,
-      width:100,
-      color: "#fff",
-      },
-      
+      navContainer: {
+        flexDirection: "row",
+        flex: 1,
+        backgroundColor:"#8c721b",
+        paddingBottom: 35,
+        },
+        navButton: {
+          flex: 1,      
+          alignItems: "center",
+          height: 40,
+          paddingTop: 7,
+          width:100,
+          color: "#fff",
+
+          },
+          navBtnTxt: {
+            color:"#252f33",
+            fontSize:14,
+            fontWeight:"600"
+          },
     
       sec1 :{
         backgroundColor: "#ebebec",

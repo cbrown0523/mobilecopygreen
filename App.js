@@ -7,13 +7,12 @@ export default function Green() {
 return (
   <SafeAreaView style = {styles.container}>
   <View style = {styles.contentBorder}>
-    <View style = {styles.contentBorder2}>
       <View style = {styles.contentBorder3}>
         <View style = {styles.headerbg}>
         <Text style = {styles.header}>Green Creative</Text>
         <Text style = {styles.header2}>Inspired by Creative Commons, licensed under Creative Commons.</Text>
         </View>
-        <View>
+        
         <View style={styles.navContainer} >
 <View style={styles.navButton}>
 
@@ -51,7 +50,8 @@ return (
 </TouchableHighlight>
 </View>
 </View>
-<ScrollView >
+
+<ScrollView style={styles.scroll}>
 <View style= {styles.text}>
   <View  style= {styles.sec1}>
 <Text style= {styles.heading}>Template Usage</Text>
@@ -81,10 +81,8 @@ return (
 <Text  >Each title is an H1 tag, so choose them carefully smile</Text>
 </View>
 </View>
-</ScrollView>
-        </View>
+        </ScrollView>
       </View>
-    </View>
   </View>
   </SafeAreaView>
 
@@ -94,34 +92,41 @@ const styles = StyleSheet.create({
   container : {
     flex:1,
     flexDirection : "column",
-    height:100,
+    height:"100%",
+
   },
   text : {
     padding: 20,
-    fontFamily: 'helvetica'
   },
   contentBorder : {
     backgroundColor: "#679159",
     height : "100",
+    padding:20,
     flex: 1,
     flexDirection:"column",
     height:100
   },
-  contentBorder2 :{
-    backgroundColor:'#bed2b7',
-    borderRadius:30,
-    padding: 20,
-    flex: 1,
-    flexDirection:"column",
-    height:100
-  },
+
   contentBorder3 :{
     backgroundColor:'#f3f2f3',
     borderRadius:30,
     flex: 1,
     flexDirection:"column",
-    height:100
+    height:100,
   },
+  scroll:{
+    flex:1
+  },
+  navContainer2: {
+    flex: .05,
+    
+    },
+    header : {
+      fontSize:34,
+      fontWeight:"800",
+      paddingTop:15,
+      color:"#252f33",
+   },
   headerbg :{
     backgroundColor : "#ddbb45",
     padding:15,
@@ -151,19 +156,18 @@ const styles = StyleSheet.create({
    },
       navContainer: {
         flexDirection: "row",
-        flex: 1,
+        flex: .02,
         backgroundColor:"#8c721b",
         paddingBottom: 35,
         },
         navButton: {
           flex: 1,      
           alignItems: "center",
-          height: 40,
           paddingTop: 7,
           width:100,
           color: "#fff",
 
-          },
+          }, 
           navBtnTxt: {
             color:"#252f33",
             fontSize:14,
@@ -173,21 +177,21 @@ const styles = StyleSheet.create({
       sec1 :{
         backgroundColor: "#ebebec",
         borderRadius : 30,
-        height:50,
-        paddingBottom:100
+        flex:1,
+        paddingBottom:25
       },
       sec2 :{
         backgroundColor: "#ebebec",
         borderRadius : 30,
     
         paddingTop: 20,
-        paddingBottom: 100
+        paddingBottom: 25
       },
       sec3 :{
         backgroundColor: "#ebebec",
         borderRadius : 30,
-        height:80,
-        paddingTop:50
+      flex:1,   
+        paddingTop:20
       },
       sec4 :{
         paddingTop:10
@@ -195,7 +199,6 @@ const styles = StyleSheet.create({
       heading : {
         fontSize : 20,
         fontWeight :"600",
-        paddingTop:2
       },
       button : {
         backgroundColor : "green"
